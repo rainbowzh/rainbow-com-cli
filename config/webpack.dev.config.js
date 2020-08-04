@@ -4,12 +4,11 @@
  * @Author: zhouhong07
  * @Date: 2020-07-31 10:08:23
  * @LastEditors: zhouhong07
- * @LastEditTime: 2020-07-31 17:26:55
+ * @LastEditTime: 2020-08-04 15:11:00
  */ 
 const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.config.js');
-
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');

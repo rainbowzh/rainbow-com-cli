@@ -2,12 +2,12 @@
  * @Description: 
  * @Version: 2.0
  * @Author: zhouhong07
- * @Date: 2020-07-31 17:26:12
+ * @Date: 2020-08-04 14:35:16
  * @LastEditors: zhouhong07
- * @LastEditTime: 2020-07-31 17:28:05
+ * @LastEditTime: 2020-08-04 15:10:02
  */ 
 module.exports = {
-  plugins : [
-    require('autoprefixer')()
+  plugins: [
+    require('autoprefixer')({ overrideBrowserslist: ['last 5 version', '>1%', 'ie >=8'] })
   ]
- };
+};
