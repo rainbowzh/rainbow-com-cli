@@ -4,14 +4,14 @@
  * @Author: zhouhong07
  * @Date: 2020-07-31 10:00:33
  * @LastEditors: zhouhong07
- * @LastEditTime: 2020-07-31 15:32:20
+ * @LastEditTime: 2020-08-04 10:32:47
  */ 
 const path = require('path') ;
 
 module.exports = {
   entry : {
     index : "./src/index.js" ,//入口文件
-    framework : ['react','react-dom']
+    // framework : ['react','react-dom']
   },
   output:{
     filename : "js/bundle.js" ,
@@ -21,10 +21,33 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/ ,
-        use : "babel-loader" ,
+        include: path.resolve(__dirname, "../src"),
+        use: ["babel-loader"] ,
         exclude : /node_modules/
+      },
+      {
+        test: /\.(jpg|png|gif)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/',
+            limit: 10000,
+          },
+        }
+      },
+      {
+        test: /\.(eot|ttf|svg|woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name]_[hash].[ext]',
+            outputPath: 'font/'
+          }
+        }
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map',
 
 }

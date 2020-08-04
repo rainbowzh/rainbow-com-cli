@@ -3,11 +3,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightcoral;
-  h1 {
+  background-color: #f07f7f;
+}
+h1 {
     font-size: 16px;
     color: #fff;
   }
-}
+  .background {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -124px;
+    z-index: -1;
+  }
 
 

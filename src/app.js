@@ -4,21 +4,27 @@
  * @Author: zhouhong07
  * @Date: 2020-07-31 10:04:24
  * @LastEditors: zhouhong07
- * @LastEditTime: 2020-07-31 17:00:18
+ * @LastEditTime: 2020-08-04 14:04:54
  */
 import React from 'react';
+import background from './image/background.png';
+import { Button } from 'antd' ;
+import { cube } from './fun.js' ;
 import './app.scss';
 
 
 
 function App() {
-  const a = function() {
-    return [1,2,3];
-  }();
-
-  a.includes(3);
+  console.log([1,2,3].includes(3));
   return (
-    <div className="App">Hello World ,99999</div>
+    <React.Fragment>
+      <div className="App">Hello World ,99999</div>
+      <img className="background" src={background} alt=""/>
+      {
+        console.log('333')
+      }
+      <Button></Button>
+    </React.Fragment>
   );
 }
 
