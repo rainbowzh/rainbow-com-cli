@@ -1,7 +1,7 @@
 {
-  "name": "rainbow-com-cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "description": "{{projectDescription}}",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "build": "webpack --config ./config/webpack.prod.config.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "zhouhong",
   "license": "ISC",
   "sideEffects": [
     "*.css",
@@ -46,12 +46,16 @@
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9" 
   },
   "dependencies": {
     "antd": "^4.5.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1" ,
+    {{#if isRouter}}
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    {{/if}}
   },
   "browserslist": {
     "production": [
