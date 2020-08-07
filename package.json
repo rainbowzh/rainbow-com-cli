@@ -50,11 +50,7 @@
   },
   "dependencies": {
     "antd": "^4.5.2",
-    "react": "^16.13.1",
-    {{#if isRouter}}
-    "react-dom": "^16.13.0",
-    "react-router-dom": "^5.1.2",
-    {{/if}}
+    "react": "^16.13.1"
   },
   "browserslist": {
     "production": [
